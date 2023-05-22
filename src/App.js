@@ -1,5 +1,5 @@
 import './App.css';
-import Estado from './component/Estado';
+import ComponenteA from './component/ComponenteA';
 import { Contact } from './models/Contact.class';
 
 function App() {
@@ -8,7 +8,7 @@ const exampleContact = new Contact('Jessica', 'Ramirez', 'ramzgonz.j@gmail.com',
 
   return (
     <div className="App">
-      <Estado contact = {exampleContact} />
+      <ComponenteA contact = {exampleContact} />
     </div>
   );
 }

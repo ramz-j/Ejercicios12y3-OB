@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Contact }  from '../models/Contact.class';
 
-const Estado = ({ contact }) => {
+const ComponenteA = ({ contact }) => {
 
   return (
     <div>
@@ -22,8 +22,8 @@ const Estado = ({ contact }) => {
   );
 };
 
-Estado.propTypes = {
+ComponenteA.propTypes = {
   contact: PropTypes.instanceOf(Contact)
 }
 
-export default Estado;
+export default ComponenteA;
