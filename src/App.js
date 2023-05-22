@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import Estado from './component/Estado';
+import { Contact } from './models/Contact.class';
 
 function App() {
+
+const exampleContact = new Contact('Jessica', 'Ramirez', 'ramzgonz.j@gmail.com', false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Estado contact = {exampleContact} />
     </div>
   );
 }
