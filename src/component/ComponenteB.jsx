@@ -5,9 +5,10 @@ import { Contact } from '../models/Contact.class';
 const ComponenteB = ({ estado }) => {
   return (
     <div>
-      <h5>
-        This task is: { estado ? 'COMPLETED' : 'PENDING' }
-      </h5>
+      <h2>
+        State: { estado ? 'Contacto En Linea' : 'Contacto No Disponible'}
+      </h2>
+      <button>{ estado ? "Desconectar" : "Conectar" }</button>
     </div>
   );
 };
@@ -17,3 +18,5 @@ ComponenteB.propTypes = {
 }
 
 export default ComponenteB;
+
+    
