@@ -1,14 +1,21 @@
-import React, {stateUse} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import { Contact } from '../models/Contact.class';
 
 const ComponenteB = ({ estado }) => {
+
+  const [conectado, setConectado] = useState(estado);
+
+  const manejarConexion = () => {
+    setConectado(!conectado)
+  }
+
   return (
     <div>
       <h2>
-        State: { estado ? 'Contacto En Linea' : 'Contacto No Disponible'}
+        State: { conectado ? 'Contacto En Linea' : 'Contacto No Disponible'}
       </h2>
-      <button>{ estado ? "Desconectar" : "Conectar" }</button>
+      <button onClick={manejarConexion}>{ conectado ? "Desconectar" : "Conectar" }</button>
     </div>
   );
 };
